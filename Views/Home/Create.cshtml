@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+
+}
+@using TileGenerator.ServiceReference1;
+
+<h2>Create</h2>
+@{
+    string imgLink = ViewBag.Url;
+    string destination = ViewBag.destination;
+    TileGeneratorSoapClient client = new TileGeneratorSoapClient();
+    client.CreateTiles(imgLink, destination);
+}
+<div>
+    Slike uspješno generirane
+</div>
+
+@Html.ActionLink("Natrag na početnu", "Index", "Home");
+
