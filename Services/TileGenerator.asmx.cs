@@ -1,4 +1,5 @@
 ﻿using Microsoft.DeepZoomTools;
+using System.Collections.Generic;
 using System.IO;
 using System.Web.Services;
 
@@ -22,8 +23,8 @@ namespace TileGenerator.Services
             {
                 ImageCreator creator = new ImageCreator();
                 CollectionCreator cc = new CollectionCreator();
-
                 creator.Create(url, destination);
+                cc.Create(new List<string> { destination }, "C:\\tu\\dzc_output.xml");
                 return;
             }
         }
