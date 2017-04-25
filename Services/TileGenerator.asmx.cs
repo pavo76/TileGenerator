@@ -21,6 +21,8 @@ namespace TileGenerator.Services
             if (!File.Exists(destination))
             {
                 ImageCreator creator = new ImageCreator();
+                CollectionCreator cc = new CollectionCreator();
+
                 creator.Create(url, destination);
                 return;
             }
