@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+
+@{
+    string tileLocation = "../../Output/"+ ViewBag.TileLocation+"/";
+ }
+
+<div id="test" style="height:400px; width:400px"></div>
+<script src="~/Scripts/openseadragon.min.js"></script>
+<script type="text/javascript">
+		var slike = {
+			  Image: {
+				xmlns: "http://schemas.microsoft.com/deepzoom/2008",
+				Url: "@tileLocation",
+				Format: "jpg",
+				Overlap: "1",
+				TileSize: "256",
+				Size: {
+                    Width: "13920",
+				  Height: "10200"
+				}
+			  }
+			};
+      var viewer = OpenSeadragon({
+        id:            'test',
+        prefixUrl:     '../../images/',
+        tileSources:   slike
+      });
+
+</script>

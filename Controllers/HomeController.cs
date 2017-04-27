@@ -19,6 +19,13 @@ namespace TileGenerator.Controllers
             ViewBag.Destination = destination;
             return View();
         }
-        
+
+        public ActionResult Test(string id)
+        {
+            ViewBag.TileLocation = id;
+            return View();
+        }
+
+
     }
 }

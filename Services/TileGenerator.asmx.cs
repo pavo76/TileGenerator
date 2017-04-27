@@ -22,9 +22,9 @@ namespace TileGenerator.Services
             if (!File.Exists(destination))
             {
                 ImageCreator creator = new ImageCreator();
-                CollectionCreator cc = new CollectionCreator();
+               // CollectionCreator cc = new CollectionCreator();
                 creator.Create(url, destination);
-                cc.Create(new List<string> { destination }, "C:\\tu\\dzc_output.xml");
+                //cc.Create(new List<string> { destination }, "C:\\tu\\dzc_output.xml");
                 return;
             }
         }

@@ -8,7 +8,8 @@
 <h2>Create</h2>
 @{
     string imgLink = ViewBag.Url;
-    string destination = ViewBag.destination;
+    string destination = "C:/Users/Dominik/documents/visual studio 2017/Projects/TileGenerator/TileGenerator/Output/" + ViewBag.destination+".xml";
+    string destination2= ViewBag.destination + "_files";
     TileGeneratorSoapClient client = new TileGeneratorSoapClient();
     client.CreateTiles(imgLink, destination);
 }
@@ -16,5 +17,9 @@
     Slike uspješno generirane
 </div>
 
-@Html.ActionLink("Natrag na početnu", "Index", "Home");
+
+
+
+@Html.ActionLink("Natrag na početnu", "Index", "Home")
+@Html.ActionLink("Pogledaj sliku", "Test", "Home", new { id = destination2 },null)
 

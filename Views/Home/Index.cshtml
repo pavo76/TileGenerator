@@ -6,9 +6,34 @@
 
 <div class="row">
     <br/>
-    Za primjer korištenja generatora koristi se link:
-    <br/>
-    http://localhost:52385/Home/Create?url={0}&destination={1}.xml
-    <br/>
-    Umjesto {0} se unese url slike za koju se treba generirati tileove, a umjesto {1} se unese path gdje da tileovi budu spremljeni.
+    <p class="row">
+        Za korištenje generatora pod URL se unese URL slike za 
+        koju želimo generirati tileove a pod Destination se 
+        unese lokacija u koju treba spremiti slike.
+    </p>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm("Create", "Home", FormMethod.Get))
+    {
+        <div class="row">
+            <div class="col-md-1">
+                @Html.Label("Url")
+            </div>
+            <div class="col-md-4">
+                @Html.Editor("url")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                @Html.Label("Destination") 
+            </div>
+            <div class="col-md-4">
+                @Html.Editor("destination")
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Create" />
+        </div>
+    }
 </div>
