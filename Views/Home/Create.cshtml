@@ -9,7 +9,7 @@
 @{
     string imgLink = ViewBag.Url;
     string destination =  ViewBag.destination+".xml";
-    string destination2= ViewBag.destination;
+    string destination2 = ViewBag.destination;
     TileGeneratorSoapClient client = new TileGeneratorSoapClient();
     client.CreateTiles(imgLink, destination);
 }

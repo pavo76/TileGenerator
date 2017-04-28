@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Collection MaxLevel="7" TileSize="256" Format="jpg" NextItemId="1" ServerFormat="Default" xmlns="http://schemas.microsoft.com/deepzoom/2009">
-  <Items>
-    <I Id="0" N="0" Source="lopte.xml">
-      <Size Width="7200" Height="4730" />
-    </I>
-  </Items>
-</Collection>

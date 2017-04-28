@@ -8,8 +8,8 @@
     <br/>
     <p class="row">
         Za korištenje generatora pod URL se unese URL slike za 
-        koju želimo generirati tileove a pod Destination se 
-        unese lokacija u koju treba spremiti slike.
+        koju želimo generirati tileove a pod Ime Filea se 
+        unese ime kako da se xml file i folder sa Tileovima zove.
     </p>
 </div>
 
@@ -18,7 +18,7 @@
     {
         <div class="row">
             <div class="col-md-1">
-                @Html.Label("Url")
+                @Html.Label("Url:")
             </div>
             <div class="col-md-4">
                 @Html.Editor("url")
@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-md-1">
-                @Html.Label("Destination") 
+                @Html.Label("Ime Filea:") 
             </div>
             <div class="col-md-4">
                 @Html.Editor("destination")
