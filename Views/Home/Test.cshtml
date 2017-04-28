@@ -10,13 +10,18 @@
     string tileLocation = "../../Output/" + ViewBag.TileLocation+".xml";
  }
 
-<div id="test" style="height:400px; width:400px"></div>
+<div id="test" style="height:576px; width:1024px; border:solid; background-color:#CCC"></div>
 <script src="~/Scripts/openseadragon.min.js"></script>
 <script type="text/javascript">		
       var viewer = OpenSeadragon({
         id:            'test',
         prefixUrl:     '../../images/',
-        tileSources:   "@tileLocation"
+        tileSources: "@tileLocation",
+        animationTime: 0.5,
+        springStiffness: 10,
+        showNavigator: true,
+        navigatorPosition: 'BOTTOM_RIGHT',
+        navigatorSizeRatio: 0.15
       });
 
 </script>
