@@ -20,12 +20,12 @@ namespace TileGenerator.Services
         public void CreateTiles(string url, string destination)
         {
             if (!File.Exists(destination))
-            {
-                string finalDestination = HttpContext.Current.Server.MapPath("~")+ "/Output/"+destination;
+            {                
                 ImageCreator creator = new ImageCreator();
-               // CollectionCreator cc = new CollectionCreator();
-                creator.Create(url, finalDestination);
-                //cc.Create(new List<string> { destination }, "C:\\tu\\dzc_output.xml");
+                creator.TileFormat = ImageFormat.Jpg;
+                creator.TileOverlap = 1;
+                creator.TileSize = 256;
+                creator.Create(url, destination);
                 return;
             }
         }
