@@ -9,7 +9,7 @@
 @{
     string imgLink = ViewBag.Url;
     string destination = "C:/Users/Dominik/documents/visual studio 2017/Projects/TileGenerator/TileGenerator/Output/" + ViewBag.destination+".xml";
-    string destination2= ViewBag.destination + "_files";
+    string destination2= ViewBag.destination;
     TileGeneratorSoapClient client = new TileGeneratorSoapClient();
     client.CreateTiles(imgLink, destination);
 }
