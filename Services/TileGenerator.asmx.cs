@@ -1,6 +1,7 @@
 ﻿using Microsoft.DeepZoomTools;
 using System.Collections.Generic;
 using System.IO;
+using System.Web;
 using System.Web.Services;
 
 namespace TileGenerator.Services
@@ -15,15 +16,15 @@ namespace TileGenerator.Services
     // [System.Web.Script.Services.ScriptService]
     public class TileGenerator : System.Web.Services.WebService
     {
-
         [WebMethod]
         public void CreateTiles(string url, string destination)
         {
             if (!File.Exists(destination))
             {
+                string finalDestination = HttpContext.Current.Server.MapPath("~")+ "/Output/"+destination;
                 ImageCreator creator = new ImageCreator();
                // CollectionCreator cc = new CollectionCreator();
-                creator.Create(url, destination);
+                creator.Create(url, finalDestination);
                 //cc.Create(new List<string> { destination }, "C:\\tu\\dzc_output.xml");
                 return;
             }
